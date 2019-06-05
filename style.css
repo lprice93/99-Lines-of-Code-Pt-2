@@ -1,5 +1,5 @@
 body {
-    background-image: url("/Users/lewiscompany/Desktop/Dropbox/Inspiration Folder/LP Laptop/Covalence/JavaScript/99lines background-01.png");
+    background-color: rgb(240, 240, 240);
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
 } 
@@ -10,13 +10,17 @@ h1 {
 
 .friend {
     background-color: #beb4d5;
-    color: #ffffff;
+    color: #000000;
     opacity: 0.5;
-    height: 15rem;
 }
 
 .friend h3 {
     text-transform: uppercase;
     font-family: 'Unica One', cursive;
     font-size: 2em;
+    padding: 2rem;
+}
+
+p {
+    padding: 0 2rem;
 }
