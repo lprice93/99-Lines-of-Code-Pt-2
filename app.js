@@ -17,24 +17,20 @@ btn[0].addEventListener('click', function () {
 
         for (let i = 99; i > 0; i--) {
 
-            if (i > 1) {
-                let p = document.createElement('p');
-                let pText = document.createTextNode(i + " lines of code in the file, " + i + " lines of code; " + friends[x] + " strikes one out, clears it all out, " + (i - 1) + " lines of code in the file ");
-                p.append(pText);
-                div.appendChild(p);
+            let p = document.createElement('p');
+            let pText;
 
-            } else if (i = 1) {
-                let p = document.createElement('p');
-                let pText = document.createTextNode(i + " line of code in the file, " + i + " line of code; " + friends[x] + " strikes one out, clears it all out, no more lines of code in the file ");
-                p.append(pText);
-                div.appendChild(p);
-
+            if (i === 2) {
+                pText = document.createTextNode(i + " lines of code in the file, " + i + " lines of code; " + friends[x] + " strikes one out, clears it all out, " + (i - 1) + " line of code in the file ");
+            } else if (i === 1) {
+                pText = document.createTextNode(i + " line of code in the file, " + i + " line of code; " + friends[x] + " strikes them out, clears it all out, no more lines of code in the file ");
             } else {
-                let p = document.createElement('p');
-                let pText = document.createTextNode(i + " lines of code in the file, " + i + " lines of code; " + friends[x] + " strikes them out, clears it all out, no more lines of code in the file ");
-                p.append(pText);
-                div.appendChild(p);
+                pText = document.createTextNode(i + " lines of code in the file, " + i + " lines of code; " + friends[x] + " strikes one out, clears it all out, " + (i - 1) + " lines of code in the file ");
             }
+
+            p.append(pText);
+            div.appendChild(p);
+
         }
     }
 });
